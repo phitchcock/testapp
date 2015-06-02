@@ -8,7 +8,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'newrelic_rpm'
-gem "rack-timeout"
+gem 'rack-timeout'
+gem 'unicorn'
 
 group :production do
   gem 'pg'
@@ -17,7 +18,6 @@ end
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rspec-rails'
