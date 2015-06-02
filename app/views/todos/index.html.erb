@@ -1,7 +1,10 @@
 <h1>Todos</h1>
 
 <% @todos.each do |todo| %>
-  <p><%= link_to todo.name, todo_path(todo) %></p>
+  <p><%= link_to todo.name, todo_path(todo) %> | tags: <% todo.tags.each do |tag| %>
+    <%= tag.title %>,
+  <% end %>
+  </p>
 <% end %>
 
 <%= link_to "New", new_todo_path %>
